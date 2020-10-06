@@ -49,6 +49,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    # other settings...
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [],
+    'DEFAULT_PERMISSION_CLASSES': [],
+}
+
 ROOT_URLCONF = 'wedding.urls'
 
 TEMPLATES = [
@@ -76,8 +83,7 @@ WSGI_APPLICATION = 'wedding.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.dummy',
     }
 }
 
